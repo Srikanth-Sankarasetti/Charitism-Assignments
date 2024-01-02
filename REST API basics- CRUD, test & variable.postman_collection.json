@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "001b9db4-eee7-40a4-a2ca-c5e46cffe9e9",
+		"name": "REST API basics: CRUD, test & variable",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) in \"Tests\" to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30597641"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/",
+				"description": "This method is used to get the all the todolist from mogodb data base"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "377"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"179-c903Kwf6bvMNimV2w0mMkLW/i+k\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 13:33:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6592b32afaecf315eff056bc\",\n        \"title\": \"Complete coding assignment\",\n        \"description\": \"complete the assignment with in dead line\",\n        \"completed\": false,\n        \"duedate\": \"2021-01-05T00:00:00.000Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"65938964808377d9a4362e68\",\n        \"title\": \"submit of codding assignment\",\n        \"description\": \"submit the code today it self\",\n        \"completed\": false,\n        \"duedate\": \"2024-01-02T03:56:20.697Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Srikanth\",\r\n    \"password\":\"Srikanth@143\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/register",
+				"description": "this method is to user registration"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Srikanth\",\r\n    \"password\":\"Srikanth@143\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/register"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12-ox+z8V7v1sWVPWSruIyRtXSbe0A\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 13:36:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "user already exits"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Srikanth\",\r\n    \"password\":\"Srikanth@143\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/login",
+				"description": "this method is to login the user. valid user will get jwtToken"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Srikanth\",\r\n    \"password\":\"Srikanth@143\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "144"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"90-9+n+2Oil4nHz/Phg1cxsFC+bM4A\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 13:38:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwtToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQyMDI2OTN9.Vtm15fl_Z2QQgQav11su5vvY_Z-1Os-VFE2czqmYRTk\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/addTodoList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"title\":\"submit of codding assignment\",\r\n \"description\":\"submit the code today it self\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/addTodoList",
+				"description": "this put method is used add the todolist into document into collection and it will also check already todo availble or not"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/addTodoList",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\":\"submit of codding assignment\",\r\n \"description\":\"submit the code today it self\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/addTodoList"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-bMu04jq5i+VSGPozBCORA2Yk+w0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 13:40:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "already data availble in todolist"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/delete/65941340e87421a64288be54",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/delete/65941340e87421a64288be54",
+				"description": "this delete method is used to delete the document from collection"
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/delete/65941340e87421a64288be54",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/delete/65941340e87421a64288be54"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16-TlVYcHqmpvC3t0abc71EwDVqwko\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jan 2024 13:45:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Todo Deleted Sussfully"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}

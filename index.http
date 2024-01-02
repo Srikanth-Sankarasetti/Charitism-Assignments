@@ -1,0 +1,37 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "name":"Srikanth",
+    "password":"Srikanth@143"
+}
+
+###
+
+POST  http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "name":"Srikanth",
+    "password":"Srikanth@143"
+}
+
+###
+GET http://localhost:3000/
+Authorization:Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk
+
+
+###
+POST http://localhost:3000/addTodoList
+Content-Type: application/json
+Authorization: Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk
+
+{
+ "title":"submit of codding assignment",
+ "description":"submit the code today it self"
+}
+
+###
+DELETE http://localhost:3000/delete/659387ba04fa8e8b5635c219
+Content-Type: application/json
+Authorization: Berear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3Jpa2FudGgiLCJpYXQiOjE3MDQxNjY0MjR9.RTvggYkgWrF_rRkt11gZaKlo3Ye6GyCgWy7Xkpntvmk
